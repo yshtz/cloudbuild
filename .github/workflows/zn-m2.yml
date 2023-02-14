@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: ipq6000
+name: ZN-M2
 
 on:
   repository_dispatch:
@@ -55,7 +55,6 @@ jobs:
       run: |
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
-#        git clone https://github.com/destan19/OpenAppFilter.git -b $REPO_BRANCH openwrt/package/OpenAppFilter
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Cache
